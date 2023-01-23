@@ -1,7 +1,7 @@
 :root {
   --base-font-family: 'Fira Sans', sans-serif, Helvetica;
 
-  --dark-blue-color: #020275;
+  --dark-blue-color: #020202;
   --light-blue-color: #93C4F5;
   --mid-blue-color: #7CBAF9;
 
@@ -10,8 +10,8 @@
   --tasklist-back-color: #cbdff4bf;
 
   --main-header-text-color: var(--dark-blue-color);
-  --background-start-color: green;
-  --background-end-color: purple;
+  --background-start-color: rgb(197, 197, 197);
+  --background-end-color: rgb(111, 111, 111);
 }
 
 * {

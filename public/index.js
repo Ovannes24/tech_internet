@@ -241,8 +241,8 @@ class Tasklist {
   }
 
   onAddTaskButtonClick = async () => {
-    const newTaskName = prompt('Введите адрес:');
-    const nomer = prompt('Введите координаты:');
+    const newTaskName = prompt('Введите название тестируемого объекта/оборудования:');
+    const nomer = prompt('Введите координаты/адрес:');
 
     if (!newTaskName) return;
 
@@ -275,8 +275,8 @@ class Tasklist {
     const taskIndex = Number(taskID.split('-T')[1]);
     const oldTaskName = this.tasks[taskIndex];
     console.log(oldTaskName);
-    const newTaskName = prompt('Введите новый адрес', oldTaskName[0]);
-    const newNomer = prompt('Введите новые координаты', oldTaskName[1]);
+    const newTaskName = prompt('Введите новый тестируемый объект/оборудование', oldTaskName[0]);
+    const newNomer = prompt('Введите новые координаты/адрес', oldTaskName[1]);
 
     if (!newTaskName || newTaskName === oldTaskName) {
       return;
@@ -303,7 +303,7 @@ class Tasklist {
     const taskIndex = Number(taskID.split('-T')[1]);
     const taskName = this.tasks[taskIndex];
 
-    if (!confirm(`Билборд '${taskName}' будет удален. Продолжить?`)) return;
+    if (!confirm(`Заявка '${taskName}' будет удалена. Продолжить?`)) return;
 
     const tasklistId = Number(this.tlID.split('TL')[1]);
     try {
@@ -428,7 +428,7 @@ class Tasklist {
     const button = document.createElement('button');
     button.type = 'button';
     button.classList.add('tm-tasklist-add-task');
-    button.innerHTML = 'Добавить билборд';
+    button.innerHTML = 'Добавить заявку на тестирование';
     button.addEventListener('click', this.onAddTaskButtonClick);
     footer.appendChild(button);
     tasklist.appendChild(footer);
